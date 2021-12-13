@@ -2,13 +2,21 @@ package projetin;
 
 public abstract class Personagem {
 	
-	String nome;
-	double XP;
-	double mana;
-	int HP;
-	boolean attack;
+	private String nome;
+	private int XP;
+	private int mana;
+	private int HP;
 	
-	/* sei nem se as coisas aqui fazem sentidokkkkkk */
+	
+	public Personagem(String nome, int XP, int mana, int HP) {
+		this.nome = nome;
+		this.XP = XP;
+		this.mana = mana;
+		this.HP = HP;
+	}
+	
+	
+	
 	
 	public String getNome() {
 		return nome;
@@ -19,19 +27,19 @@ public abstract class Personagem {
 	
 	
 	
-	public double getXP() {
+	public int getXP() {
 		return XP;
 	}
-	public void setXP(double XP) {
+	public void setXP(int XP) {
 		this.XP = XP;
 	}
 	
 	
 	
-	public double getMana() {
+	public int getMana() {
 		return mana;
 	}
-	public void setMana(double mana) {
+	public void setMana(int mana) {
 		this.mana = mana;
 	}
 	
@@ -45,12 +53,6 @@ public abstract class Personagem {
 	}
 	
 	
-	
-	public boolean getAttack() {
-		return attack;
-	}
-	public void setAttack(boolean attack) {
-		this.attack = attack;
-	}
-	
+
+}
 
