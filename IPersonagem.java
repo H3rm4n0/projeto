@@ -2,6 +2,9 @@ package projetin;
 
 public interface IPersonagem {
 	
-	public void ataca();
+	public void personagemAtribs();
+	public void ataque();
+	public void ataqueEspecial();
+	
 
 }

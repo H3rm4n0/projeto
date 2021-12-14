@@ -3,14 +3,12 @@ package projetin;
 public abstract class Personagem {
 	
 	private String nome;
-	private int XP;
 	private int mana;
 	private int HP;
 	
 	
-	public Personagem(String nome, int XP, int mana, int HP) {
+	public Personagem(String nome, int mana, int HP) {
 		this.nome = nome;
-		this.XP = XP;
 		this.mana = mana;
 		this.HP = HP;
 	}
@@ -23,15 +21,6 @@ public abstract class Personagem {
 	}
 	public void setNome(String nome) {
 		this.nome = nome;
-	}
-	
-	
-	
-	public int getXP() {
-		return XP;
-	}
-	public void setXP(int XP) {
-		this.XP = XP;
 	}
 	
 	

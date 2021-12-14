@@ -1,12 +1,32 @@
 package projetin;
 
+import java.util.Scanner;
+
 public class Main {
+	
+	Scanner leitor = new Scanner(System.in);
 		
 	public static void main(String[] args) {
 			
-	Mago mago = new Mago("mago", 100, 500, 150);
+	Mago mago = new Mago("mago", 20, 150);
 	
-	mago.ataca();
+	System.out.printf("Escolha:\nAtaque\nAtaque Especial");
 		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public int input() {
+		
+		int leitura = Integer.parseInt(leitor.nextLine());
+		
+		return leitura;
 	}
 }
