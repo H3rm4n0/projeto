@@ -1,31 +1,29 @@
 package projetin;
 
-public class Mago extends Personagem implements IPersonagem {
-	
+import java.util.Random;
 
-	int manaValor = getMana();
-	attack
+public class Mago extends Personagem{
 
-	public Mago(String nome, int mana, int HP) {
-		super(nome, mana, HP);
+
+	Random rand = new Random();
+
+	public Mago(){
+		super();
+		this.setNome(getNome());
+		this.setHP(300);
+		this.setMana(0);
 	}
 
-	public void personagemAtribs() {
-		attacks.add("magia simples");
-		attacks.add("magia especial");
-	}
-	
-	public void ataqueEspecial(int inimigoLife) {
-		if (manaAdd == manaValor) {
-			int saldoHP = (inimigoLife - (danoAleatorio*2));
-			manaAdd = 0;
-			
-		} else {
-			ataque(inimigoLife);
-		}
+	@Override
+	public void ataque(Personagem enemy){
+		this.setMana(this.getMana() + 5);
+		enemy.setHP(enemy.getHP() - (rand.nextInt(50 - 40) + 40));
 	}
 
-	public String listAtrib(){
-		return null;
+	@Override
+	public void ataqueEspecial(Personagem enemy){
+		this.setMana(this.getMana() + 5);
+		enemy.setHP(enemy.getHP() - rand.nextInt(50) + 40);
+		enemy.setBurn(true);
 	}
 }

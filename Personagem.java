@@ -9,32 +9,42 @@ public abstract class Personagem {
 
 	private String nome;
 	private int mana;
-	private int HP;
-	private String[] attacks;
+	private int hp;
+	private String action;
+	private boolean burn;
 
-
-	public Personagem(String nome, int mana, int HP) {
+	public Personagem(String nome, int mana, int hp) {
 		this.nome = nome;
 		this.mana = mana;
-		this.HP = HP;
+		this.hp = hp;
+		this.burn = false;
 	}
 
-	public void ataque(int inimigoLife) {
-		System.out.println("atacou com magia simples");
-		mana+=5;
-		int saldoHP = (inimigoLife - danoAleatorio;
-		System.out.println(saldoHP);
+	public Personagem() {
 	}
 	
 	public String getNome() {
-		return nome;
+		return this.nome;
 	}
+	public void setNome(String s){this.nome = s;}
 	
 	public int getMana() {
-		return mana;
+		return this.mana;
 	}
+	public void setMana(int i) {this.mana = i;}
 	
 	public int getHP() {
-		return HP;
+		return this.hp;
 	}
+	public void setHP(int i) { this.hp = i;}
+
+	public boolean getBurn() { return this.burn;}
+	public void setBurn(boolean b) {this.burn = b;}
+
+	public String getAction() { return this.action;}
+	public void setAction(String s){this.action = s;}
+
+	public void ataque(Personagem personagem){}
+
+	public void ataqueEspecial(Personagem personagem){}
 }

@@ -6,23 +6,26 @@ import java.util.Scanner;
 public class Main {
 	
 	static Scanner leitor = new Scanner(System.in);
-		
-	public static void main(String[] args) {
-		
-		String res;
-			
-		Mago mago = new Mago("mago", 20, 150);
-		inimigoTest enemy = new inimigoTest("shrek", 50, 200);
 
-		res = input();
-		if (Objects.equals(res, "1")) {
-			mago.ataque(enemy.getHP());
-		} else if (Objects.equals(res, "2")) {
-			mago.ataqueEspecial(enemy.getHP());
-		} else {
-			System.out.println("inválido");
+	public static void battle(Personagem user, Personagem enemy){
+		while (user.getHP() > 0  && enemy.getHP() > 0){
+			user.setAction(leitor.nextLine());
+			if (Objects.equals(user.getAction(), "ataque")){
+				user.ataque(enemy);
+			}else if (Objects.equals(user.getAction(), "ataque especial")) {
+				user.ataqueEspecial(enemy);
+			}
+			enemy.ataque(user);
+			if (enemy.getBurn()){
+				enemy.setHP(enemy.getHP() - 5);
+			}
 		}
 	}
 
-	public static String input() {return leitor.nextLine();}
-}
+
+	public static void main(String[] args) {
+		Mago user = new Mago();
+		Inimigo enemy = new Inimigo();
+		battle(user,enemy);
+		}
+	}
