@@ -1,5 +1,6 @@
 package projetin;
 
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Main {
@@ -10,37 +11,18 @@ public class Main {
 		
 		String res;
 			
-	Mago mago = new Mago("mago", 20, 150);
-	inimigoTest enemy = new inimigoTest("shrek", 50, 200);
-	
-	System.out.printf("Escolha:\n1 - Ataque\n2 - Ataque Especial");
-	res = input();
-	if (res == "1") {
-		mago.ataque(enemy.getHP());
-		
-		
-	} else if (res == "2") {
-		mago.ataqueEspecial(enemy.getHP());
-	} else {
-		System.out.println("inválido");
+		Mago mago = new Mago("mago", 20, 150);
+		inimigoTest enemy = new inimigoTest("shrek", 50, 200);
+
+		res = input();
+		if (Objects.equals(res, "1")) {
+			mago.ataque(enemy.getHP());
+		} else if (Objects.equals(res, "2")) {
+			mago.ataqueEspecial(enemy.getHP());
+		} else {
+			System.out.println("inválido");
+		}
 	}
-	
-		
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-public static String input() {
-		
-		String leitura = leitor.nextLine() ;
-		
-		return leitura;
-	}
+
+	public static String input() {return leitor.nextLine();}
 }
