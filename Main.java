@@ -4,13 +4,27 @@ import java.util.Scanner;
 
 public class Main {
 	
-	Scanner leitor = new Scanner(System.in);
+	static Scanner leitor = new Scanner(System.in);
 		
 	public static void main(String[] args) {
+		
+		String res;
 			
 	Mago mago = new Mago("mago", 20, 150);
+	inimigoTest enemy = new inimigoTest("shrek", 50, 200);
 	
-	System.out.printf("Escolha:\nAtaque\nAtaque Especial");
+	System.out.printf("Escolha:\n1 - Ataque\n2 - Ataque Especial");
+	res = input();
+	if (res == "1") {
+		mago.ataque(enemy.getHP());
+		
+		
+	} else if (res == "2") {
+		mago.ataqueEspecial(enemy.getHP());
+	} else {
+		System.out.println("inválido");
+	}
+	
 		
 	}
 	
@@ -23,9 +37,9 @@ public class Main {
 	
 	
 	
-	public int input() {
+public static String input() {
 		
-		int leitura = Integer.parseInt(leitor.nextLine());
+		String leitura = leitor.nextLine() ;
 		
 		return leitura;
 	}

@@ -26,12 +26,12 @@ public class inimigoTest extends Personagem implements IPersonagem {
 		
 	
 		
-	public void ataque() {
+	public void ataque(int inimigoLife) {
 		
 			
 	}
 	
-	public void ataqueEspecial() {
+	public void ataqueEspecial(int inimigoLife) {
 		
 	}
 }
