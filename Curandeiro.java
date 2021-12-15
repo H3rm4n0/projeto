@@ -17,8 +17,10 @@ public class Curandeiro extends Personagem{
 
     @Override
     public void ataque(Personagem enemy){
+            if (! enemy.getBurn()){
             if (this.getMana() < 15) { this.setMana(this.getMana() + 5);}
-            enemy.setHP(enemy.getHP() - (rand.nextInt(20 - 15) + 15));
+            enemy.setHP(enemy.getHP() - (rand.nextInt(20 - 15) + 15));}
+            else{enemy.setHP(enemy.getHP() - (rand.nextInt(20 - 15) + 15));}
     }
 
     @Override

@@ -17,7 +17,7 @@ public class Main {
 			}
 			enemy.ataque(user);
 			if (enemy.getBurn()){
-				enemy.setHP(enemy.getHP() - 5);
+				enemy.setHP(enemy.getHP() - 15);
 			}
 		}
 	}
