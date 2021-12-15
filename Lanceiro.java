@@ -3,7 +3,6 @@ package projetin;
 public class Lanceiro extends Personagem{
 
     public Lanceiro(){
-        super();
         this.setNome(getNome());
         this.setHP(400);
         this.setMana(0);

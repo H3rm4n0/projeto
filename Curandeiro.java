@@ -8,7 +8,6 @@ public class Curandeiro extends Personagem{
     private boolean skill;
 
     public Curandeiro(){
-        super();
         this.setNome(getNome());
         this.setHP(200);
         this.setMana(0);

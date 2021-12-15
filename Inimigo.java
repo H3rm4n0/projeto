@@ -8,7 +8,6 @@ public class Inimigo extends Personagem{
     Random rand = new Random();
 
     public Inimigo() {
-        super();
         this.setNome("Goblin");
         this.setHP(500);
     }

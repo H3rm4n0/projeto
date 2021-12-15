@@ -8,7 +8,6 @@ public class Guerreiro extends Personagem {
     private boolean skill;
 
     public Guerreiro(){
-        super();
         this.setNome(getNome());
         this.setHP(500);
         this.setMana(0);

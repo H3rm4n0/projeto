@@ -8,7 +8,6 @@ public class Mago extends Personagem{
 	Random rand = new Random();
 
 	public Mago(){
-		super();
 		this.setNome(getNome());
 		this.setHP(250);
 		this.setMana(0);

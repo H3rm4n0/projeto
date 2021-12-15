@@ -3,7 +3,6 @@ package projetin;
 public class Arqueiro extends Personagem{
 
     public Arqueiro(){
-        super();
         this.setNome(getNome());
         this.setHP(200);
         this.setMana(0);

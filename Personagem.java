@@ -5,20 +5,11 @@ import java.util.Random;
 public abstract class Personagem {
 
 	Random rand = new Random();
-	int danoAleatorio = (rand.nextInt(20) + 30);
-
 	private String nome;
 	private int mana;
 	private int hp;
 	private String action;
 	private boolean burn;
-
-	public Personagem(String nome, int mana, int hp) {
-		this.nome = nome;
-		this.mana = mana;
-		this.hp = hp;
-		this.burn = false;
-	}
 
 	public Personagem() {
 	}
