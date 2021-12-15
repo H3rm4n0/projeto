@@ -10,7 +10,7 @@ public class Guerreiro extends Personagem {
     public Guerreiro(){
         super();
         this.setNome(getNome());
-        this.setHP(300);
+        this.setHP(500);
         this.setMana(0);
         skill = false;
     }
@@ -23,17 +23,16 @@ public class Guerreiro extends Personagem {
     @Override
     public void ataque(Personagem enemy){
         if (! getSkill()){
-        this.setMana(this.getMana() + 5);
-        enemy.setHP(enemy.getHP() - (rand.nextInt(30 - 20) + 30));
+            if (this.getMana() < 30) { this.setMana(this.getMana() + 5);}
+            enemy.setHP(enemy.getHP() - (rand.nextInt(30 - 20) + 30));
         } else{
-            this.setMana(this.getMana() + 5);
             enemy.setHP((int) (enemy.getHP() - ((rand.nextInt(30 - 20) + 30) * 1.5)));
         }
     }
 
     @Override
     public void ataqueEspecial(Personagem enemy){
-        if (this.getMana() >= 30){
+        if (this.getMana() == 30){
             this.setMana(this.getMana() - 30);
             this.setSkill(true);
         }

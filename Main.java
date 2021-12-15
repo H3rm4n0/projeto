@@ -24,8 +24,6 @@ public class Main {
 
 
 	public static void main(String[] args) {
-		Mago user = new Mago();
-		Inimigo enemy = new Inimigo();
-		battle(user,enemy);
+
 		}
 	}
