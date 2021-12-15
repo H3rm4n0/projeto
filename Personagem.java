@@ -11,9 +11,7 @@ public abstract class Personagem {
 	private String action;
 	private boolean burn;
 
-	public Personagem() {
-	}
-	
+
 	public String getNome() {
 		return this.nome;
 	}
