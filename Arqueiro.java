@@ -13,7 +13,7 @@ public class Arqueiro extends Personagem{
     public void ataque(Personagem enemy){
         int dmg = (rand.nextInt(70 - 60) + 60);
         if (rand.nextInt(10) == 1){enemy.setHP(enemy.getHP() - (dmg + (dmg * 50/100)));}
-        else{enemy.setHP(enemy.getHP() - ((rand.nextInt(70 - 60) + 60)));}
+        else{enemy.setHP(enemy.getHP() - dmg);}
     }
 
 }
