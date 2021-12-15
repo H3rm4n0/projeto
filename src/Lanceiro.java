@@ -1,4 +1,4 @@
-package projetin;
+package projetin.src;
 
 public class Lanceiro extends Personagem{
 

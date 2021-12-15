@@ -1,6 +1,6 @@
-package projetin;
+package projetin.src;
 
-public class Arqueiro extends Personagem{
+public class Arqueiro extends Personagem {
 
     public Arqueiro(){
         this.setNome(getNome());

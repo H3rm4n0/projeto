@@ -1,4 +1,4 @@
-package projetin;
+package projetin.src;
 
 import java.util.Objects;
 
