@@ -24,9 +24,9 @@ public class Guerreiro extends Personagem {
     public void ataque(Personagem enemy){
         if (! getSkill()){
             if (this.getMana() < 30) { this.setMana(this.getMana() + 5);}
-            enemy.setHP(enemy.getHP() - (rand.nextInt(30 - 20) + 30));
+            enemy.setHP(enemy.getHP() - (rand.nextInt(30 - 20) + 20));
         } else{
-            enemy.setHP((int) (enemy.getHP() - ((rand.nextInt(30 - 20) + 30) * 1.5)));
+            enemy.setHP((int) (enemy.getHP() - ((rand.nextInt(30 - 20) + 20) * 1.5)));
         }
     }
 

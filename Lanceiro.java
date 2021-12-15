@@ -12,14 +12,14 @@ public class Lanceiro extends Personagem{
     @Override
     public void ataque(Personagem enemy){
         if (this.getMana() < 20) { this.setMana(this.getMana() + 5);}
-        enemy.setHP(enemy.getHP() - (rand.nextInt(35 - 25) + 35));
+        enemy.setHP(enemy.getHP() - (rand.nextInt(35 - 25) + 25));
     }
 
     @Override
     public void ataqueEspecial(Personagem enemy){
-        if (this.getMana() >= 20){
+        if (this.getMana() == 10){
             this.setMana(this.getMana() - 20);
-            enemy.setHP(enemy.getHP() - ((rand.nextInt(35 - 25) + 35) * 2));
+            enemy.setHP(enemy.getHP() - ((rand.nextInt(35 - 25) + 25) * 2));
             }
     }
 }
