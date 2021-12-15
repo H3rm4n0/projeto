@@ -44,6 +44,11 @@ public abstract class Personagem {
 	public String getAction() { return this.action;}
 	public void setAction(String s){this.action = s;}
 
+	public void descansar(){
+		this.setHP(this.getHP() + 30);
+
+	}
+
 	public void ataque(Personagem personagem){}
 
 	public void ataqueEspecial(Personagem personagem){}
