@@ -11,7 +11,9 @@ public class Arqueiro extends Personagem{
 
     @Override
     public void ataque(Personagem enemy){
-        enemy.setHP(enemy.getHP() - (rand.nextInt(70 - 60) + 60));
+        int dmg = (rand.nextInt(70 - 60) + 60);
+        if (rand.nextInt(10) == 1){enemy.setHP(enemy.getHP() - (dmg + (dmg * 50/100)));}
+        else{enemy.setHP(enemy.getHP() - ((rand.nextInt(70 - 60) + 60)));}
     }
 
 }

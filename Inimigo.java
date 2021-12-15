@@ -10,11 +10,11 @@ public class Inimigo extends Personagem{
     public Inimigo() {
         super();
         this.setNome("Goblin");
-        this.setHP(100);
+        this.setHP(500);
     }
 
     @Override
     public void ataque(Personagem personagem) {
-        personagem.setHP(personagem.getHP() - (rand.nextInt(20 - 10) + 10));
+        personagem.setHP(personagem.getHP() - (rand.nextInt(30 - 20) + 20));
     }
 }
