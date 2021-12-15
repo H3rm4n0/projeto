@@ -9,24 +9,21 @@ public class Curandeiro extends Personagem{
 
     public Curandeiro(){
         this.setNome(getNome());
-        this.setHP(200);
+        this.setHP(300);
         this.setMana(0);
     }
 
-
     @Override
     public void ataque(Personagem enemy){
-            if (! enemy.getBurn()){
             if (this.getMana() < 15) { this.setMana(this.getMana() + 5);}
-            enemy.setHP(enemy.getHP() - (rand.nextInt(20 - 15) + 15));}
-            else{enemy.setHP(enemy.getHP() - (rand.nextInt(20 - 15) + 15));}
+            enemy.setHP(enemy.getHP() - (rand.nextInt(25 - 15) + 15));
     }
 
     @Override
     public void ataqueEspecial(Personagem enemy){
         if (this.getMana() == 15){
             this.setMana(this.getMana() - 20);
-            enemy.setHP(enemy.getHP() - (rand.nextInt(20 - 15) + 15));
+            enemy.setHP(enemy.getHP() - (rand.nextInt(25 - 15) + 15));
             this.setHP(this.getHP() + 50);
         }
     }

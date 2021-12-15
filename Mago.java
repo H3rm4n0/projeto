@@ -15,8 +15,10 @@ public class Mago extends Personagem{
 
 	@Override
 	public void ataque(Personagem enemy){
+		if (!enemy.getBurn()){
 		if (this.getMana() < 20) { this.setMana(this.getMana() + 5);}
-		enemy.setHP(enemy.getHP() - (rand.nextInt(35 - 25) + 25));
+		enemy.setHP(enemy.getHP() - (rand.nextInt(35 - 25) + 25));}
+		else{enemy.setHP(enemy.getHP() - (rand.nextInt(35 - 25) + 25));}
 	}
 
 	@Override
